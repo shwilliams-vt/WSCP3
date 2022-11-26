@@ -19,7 +19,8 @@ To replicate the experiment or understand how I performed the experiment, follow
         iii. 50 trials
     c. Add a probability parameter to '''computeContribs'''
     d. Wrap the expression '''rank / urls''' with a call to SIMULATE_SDC, and add the probability as the second parameter.
-    e. When done, it should resemble '''pageranktest.py'''
+    e. When the PageRank values are output, remove the "%s has rank:" from the output string so that only the rank is printed (as a number).
+    f. When done, it should resemble '''pageranktest.py''' (You can test with this file instead).
 3. Call '''~/build_pyspark_fault_injector.sh -i ./pagerank.py -o pagerank_sdc.py''', where '''pagerank.py''' is the modified PageRank application and '''pagerank_sdc.py''' will be the output PySpark app with the library SDC code added.
 4. Add '''testpagerank.txt''' to HDFS (e.g. to '''/data/testpagerank.txt''', as it is the PageRank example instance found in the report.
 5. Call '''spark-submit --master local[4] pagerank_sdc.py /data/testpagerank.txt > pagerank_output.txt'''. This will probably take a while
