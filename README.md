@@ -8,7 +8,7 @@ This project explores silent data corruption in Apache Spark. I designed a SDC s
 
 To replicate the experiment or understand how I performed the experiment, follow these steps while inside this directory (performed in Ubuntu 22.04.1). 
 
-0. Install Apache Spark 3.3.0 and Hadoop 3.3.4 HDFS, set up to run in a cluster (add commands to PATH). Also disable log4j's logging that pollutes output so that the only output printed to the terminal is from stdout.
+0. Install Apache Spark 3.3.0 and Hadoop 3.3.4 HDFS, set up to run in a cluster (add commands to PATH). Also disable Spark's log4j logging that pollutes output so that the only output printed to the terminal is from the application.
 1. Copy the example PageRank PySpark operation included in the Apache Spark sample directory to the current working directory.
 2. Modify this file by:
     a. Remove the (3rd) iteration argument requirement (it will not be used)
